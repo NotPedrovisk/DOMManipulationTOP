@@ -31,3 +31,17 @@ bdiv.appendChild(head1);
 bdiv.appendChild(anotherPara);
 
 container.appendChild(bdiv);
+
+function alertFunc(){
+    alert("YUPEEE YOU DID IT!");
+}
+
+//This way is used to attach event listeners to a single node
+const btn = document.querySelector("#btn");
+btn.addEventListener("click",alertFunc);
+
+//this way is used for multiple nodes, in this case every node with the button type
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) =>{
+    button.addEventListener("dblclick",alertFunc)
+})
